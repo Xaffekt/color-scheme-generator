@@ -1,10 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <h1>index.html</h1>
+        <main class="container">
+            <header>
+                <input class="color-picker" type="color"/>
+                <div class="scheme-select">
+                    <select>
+                        <!-- Pull from api? -->
+                        <option value="Monochrome">Monochrome</option>
+                        <option value="Test">Test</option>
+                    </select>
+                    <span class="custom-arrow"></span>
+                </div>
+                <button>Get color scheme</button>
+            </header>
+
+            <!-- Color section -->
+
+            <!-- Display section in flex row -->
+            <section class="scheme-container">
+                <!-- Display color container in flex column -->
+                <div class="color-container">
+                    <div class="color-stripe">
+                        <!-- Background: color -->
+                        <p>PLACEHOLDER</p>
+                    </div>
+                    <p class="color-code">#hexcode</p>
+                </div>
+
+                <div class="color-container">
+                    <div class="color-stripe">
+                        <!-- Background: color -->
+                        <p>PLACEHOLDER</p>
+                    </div>
+                    <p class="color-code">#hexcode</p>
+                </div>
+            </section>
+        </main>
         <script src="index.js"></script>
     </body>
 </html>

@@ -1,4 +1,84 @@
 html, body {
     margin: 0;
     padding: 0;
+    color: #D5D4D8;
 }
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    }
+
+.container {
+    width: 550px ;
+    height: 550px;
+    background: #1F2937;
+    
+    margin: 0 auto;
+}
+
+header,
+.scheme-container,
+.color-container {
+    display: flex;
+}
+
+header {
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.44em 0.95em;
+}
+
+.color-picker {
+    width: 51px;
+    height: 34px;
+    
+}
+
+.scheme-select {
+    position: relative;
+    font-family: inherit;
+    width: 312px;
+}
+
+  select {
+    width: 100%;
+    padding: 0.56em 4em 0.56em 0.81em;
+    border-radius: 6px;
+    background: #1F2937;
+    color: inherit;
+    appearance: none;
+  }
+
+  .custom-arrow {
+    position: absolute;
+    display: block;
+    background: transparent;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 3em;
+    pointer-events: none;
+    border-radius: 0 6px 6px 0;
+  }
+
+  .custom-arrow::before,
+  .custom-arrow::after {
+    --size: .65em;
+
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+
+  .custom-arrow::before {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-bottom: var(--size) solid #D5D4D8;
+  }
+
+  .custom-arrow::after {
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-top: var(--size) solid #D5D4D8;
+  }
