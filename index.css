@@ -61,24 +61,13 @@ header {
     border-radius: 0 6px 6px 0;
   }
 
-  .custom-arrow::before,
-  .custom-arrow::after {
-    --size: .65em;
-
-    content: '';
+    .select-selected:after {
     position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
     width: 0;
     height: 0;
-  }
-
-  .custom-arrow::before {
-    border-left: var(--size) solid transparent;
-    border-right: var(--size) solid transparent;
-    border-bottom: var(--size) solid #D5D4D8;
-  }
-
-  .custom-arrow::after {
-    border-left: var(--size) solid transparent;
-    border-right: var(--size) solid transparent;
-    border-top: var(--size) solid #D5D4D8;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
   }
