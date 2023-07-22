@@ -14,25 +14,23 @@ document.addEventListener("click", e => {
         callColorApi()
     }
     else if(e.target.dataset.hexValue) {
-        console.log(e.target.dataset.hexValue)
         copyHex(e.target.dataset.hexValue)
     }
 })
 
 function callColorApi() {
-        //clears array on button press
+        //clears array
         colorHexArray.splice(0, colorHexArray.length)
 
         //formats color picker value to work with api query
-        const colorPicker = document.getElementById('color-picker-el').value
-        const colorPickerHex = colorPicker.slice(1,colorPicker.length)
-        console.log(colorPickerHex)
+        let colorPicker = document.getElementById('color-picker-el').value
+        colorPicker = colorPicker.slice(1,colorPicker.length) //removes # from value
+        console.log(colorPicker)
     
         //Scheme value from select menu
         const schemeSelect = document.getElementById('scheme-select-el').value
     
-    
-        fetch(`https://www.thecolorapi.com/scheme?count=5&hex=${colorPickerHex}&mode=${schemeSelect}`)
+        fetch(`https://www.thecolorapi.com/scheme?count=5&hex=${colorPicker}&mode=${schemeSelect}`)
         .then(res => res.json())
         .then(data => {      
             data.colors.forEach(element => {
