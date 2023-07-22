@@ -3,14 +3,10 @@
 //Base URL: https://www.thecolorapi.com
 //End point: /scheme
 
-
-
 const generateScheme = document.getElementById('scheme-btn-el')
 const schemeContainer = document.getElementById('scheme-container-el')
 
 const colorHexArray = []
-
-
 
 
 generateScheme.addEventListener("click", () => {
@@ -22,24 +18,24 @@ generateScheme.addEventListener("click", () => {
     const colorPickerHex = colorPicker.slice(1,colorPicker.length)
     console.log(colorPickerHex)
 
-    //
+    //Scheme value from select menu
     const schemeSelect = document.getElementById('scheme-select-el').value
-    console.log(schemeSelect.value)
 
 
     fetch(`https://www.thecolorapi.com/scheme?count=5&hex=${colorPickerHex}&mode=${schemeSelect}`)
     .then(res => res.json())
-    .then(data => {
-        console.log(data)
-        
+    .then(data => {      
         data.colors.forEach(element => {
             colorHexArray.push(element.hex.value)
-        });
-        console.log(colorHexArray)
+        })
         renderAllColors()
     })
     
 })
+
+function callApi() {
+    
+}
 
 function colorStripeHtml(hex) {
     return `
@@ -58,3 +54,13 @@ function renderAllColors() {
     })
     schemeContainer.innerHTML = html
 }
+
+
+fetch("https://www.thecolorapi.com/scheme?count=5&hex=838383&mode=monochrome")
+    .then(res => res.json())
+    .then(data => {      
+        data.colors.forEach(element => {
+            colorHexArray.push(element.hex.value)
+        })
+        renderAllColors()
+    })
