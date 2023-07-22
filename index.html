@@ -4,20 +4,42 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <link rel="stylesheet" href="index.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     </head>
     <body>
         <main class="container">
             <header>
-                <input class="color-picker" type="color"/>
+                <input class="color-picker" type="color" id="color-picker-el"/>
                 <div class="scheme-select">
-                    <select>
+                    <select id="scheme-select-el">
                         <!-- Pull from api? -->
                         <option value="Monochrome">Monochrome</option>
                         <option value="Test">Test</option>
                     </select>
-                    <span class="custom-arrow"></span>
+                    <svg 
+                        class="custom-arrow" 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        width="20" 
+                        height="20" 
+                        viewBox="0 0 20 20" 
+                        fill="none"
+                    >
+    
+                        <path 
+                            d="M17 7L10 14L3 7" 
+                            stroke="#D5D4D8" 
+                            stroke-width="2" 
+                            stroke-linecap="round" 
+                            stroke-linejoin="round"
+                        />
+
+                    </svg>
                 </div>
-                <button>Get color scheme</button>
+                <button class="scheme-btn" id="scheme-btn-el">Get color scheme</button>
             </header>
 
             <!-- Color section -->
@@ -26,17 +48,15 @@
             <section class="scheme-container">
                 <!-- Display color container in flex column -->
                 <div class="color-container">
-                    <div class="color-stripe">
+                    <div class="color-stripe" id="one">
                         <!-- Background: color -->
-                        <p>PLACEHOLDER</p>
                     </div>
                     <p class="color-code">#hexcode</p>
                 </div>
 
                 <div class="color-container">
-                    <div class="color-stripe">
+                    <div class="color-stripe" id="two">
                         <!-- Background: color -->
-                        <p>PLACEHOLDER</p>
                     </div>
                     <p class="color-code">#hexcode</p>
                 </div>
