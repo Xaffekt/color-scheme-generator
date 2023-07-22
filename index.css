@@ -84,17 +84,20 @@ select {
 .color-container {
   flex-direction: column;
   height: 100%;
+  cursor: pointer;
 }
 
 .color-stripe {
   width: 110px;
   height: 415px;
+  pointer-events: none;
 }
 
 .color-code {
   font-size: .75rem;
   text-align: center;
   margin: 22px auto;
+  pointer-events: none;
 }
  
 
