@@ -17,8 +17,13 @@
                 <div class="scheme-select">
                     <select id="scheme-select-el">
                         <!-- Pull from api? -->
-                        <option value="Monochrome">Monochrome</option>
-                        <option value="Test">Test</option>
+                        <option value="monochrome">monochrome</option>
+                        <option value="monochrome-dark">monochrome-dark</option>
+                        <option value="monochrome-light">monochrome-light</option>
+                        <option value="analogic">analogic</option>
+                        <option value="complement">complement</option>
+                        <option value="analogic-complement">analogic-complement</option>
+                        <option value="triad">triad</option>
                     </select>
                     <svg 
                         class="custom-arrow" 
@@ -43,23 +48,8 @@
             </header>
 
             <!-- Color section -->
-
-            <!-- Display section in flex row -->
-            <section class="scheme-container">
-                <!-- Display color container in flex column -->
-                <div class="color-container">
-                    <div class="color-stripe" id="one">
-                        <!-- Background: color -->
-                    </div>
-                    <p class="color-code">#hexcode</p>
-                </div>
-
-                <div class="color-container">
-                    <div class="color-stripe" id="two">
-                        <!-- Background: color -->
-                    </div>
-                    <p class="color-code">#hexcode</p>
-                </div>
+            <section class="scheme-container" id="scheme-container-el">
+                <!-- Handled in JS -->
             </section>
         </main>
         <script src="index.js"></script>
