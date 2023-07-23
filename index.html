@@ -13,34 +13,36 @@
     <body>
         <main class="container">
             <header>
-                <input class="color-picker" type="color" id="color-picker-el"/>
-                <div class="scheme-select">
-                    <select id="scheme-select-el">
-                        <option value="monochrome">monochrome</option>
-                        <option value="monochrome-dark">monochrome-dark</option>
-                        <option value="monochrome-light">monochrome-light</option>
-                        <option value="analogic">analogic</option>
-                        <option value="complement">complement</option>
-                        <option value="analogic-complement">analogic-complement</option>
-                        <option value="triad">triad</option>
-                    </select>
-                    <svg 
-                        class="custom-arrow" 
-                        xmlns="http://www.w3.org/2000/svg" 
-                        width="20" 
-                        height="20" 
-                        viewBox="0 0 20 20" 
-                        fill="none"
-                    >
-                        <path 
-                            d="M17 7L10 14L3 7" 
-                            stroke="#D5D4D8" 
-                            stroke-width="2" 
-                            stroke-linecap="round" 
-                            stroke-linejoin="round"
-                        />
+                <div class="sub-container">
+                    <input class="color-picker" type="color" id="color-picker-el"/>
+                    <div class="scheme-select">
+                        <select id="scheme-select-el">
+                            <option value="monochrome">monochrome</option>
+                            <option value="monochrome-dark">monochrome-dark</option>
+                            <option value="monochrome-light">monochrome-light</option>
+                            <option value="analogic">analogic</option>
+                            <option value="complement">complement</option>
+                            <option value="analogic-complement">analogic-complement</option>
+                            <option value="triad">triad</option>
+                        </select>
+                        <svg 
+                            class="custom-arrow" 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            width="20" 
+                            height="20" 
+                            viewBox="0 0 20 20" 
+                            fill="none"
+                        >
+                            <path 
+                                d="M17 7L10 14L3 7" 
+                                stroke="#D5D4D8" 
+                                stroke-width="2" 
+                                stroke-linecap="round" 
+                                stroke-linejoin="round"
+                            />
 
-                    </svg>
+                        </svg>
+                    </div>
                 </div>
                 <button class="scheme-btn" id="scheme-btn-el">Get color scheme</button>
             </header>

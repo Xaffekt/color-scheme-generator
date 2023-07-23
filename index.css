@@ -1,7 +1,9 @@
 html, body {
+  height: 0;
     margin: 0;
     padding: 0;
     color: #D5D4D8;
+    
     font-family: 'Inter', 'sans-serif';
 }
 
@@ -10,26 +12,35 @@ html, body {
     }
 
 .container {
-    width: 550px ;
-    height: 550px;
+    max-width: 1000px ;
+    max-height: 1000px;
+    width: 100vw;
+    height: 100vh;
     background: #1F2937;
-    
+    padding: .75em;
     margin: 0 auto;
 }
 
 header,
 .scheme-container,
-.color-container {
+.color-container,
+.sub-container {
     display: flex;
 }
 
 
 /* Header seaction */
 header {
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
+    gap: 5px;
     padding: 1.44em 0.95em;
     height: 15%;
+    margin-bottom: 1em;
+}
+
+.sub-container {
+  justify-content: space-between;
+  margin-bottom: 1em;
 }
 
 .color-picker {
@@ -42,7 +53,7 @@ header {
 .scheme-select {
   position: relative;
   font-family: inherit;
-  width: 312px;
+  width: 70%;
 }
 
 select {
@@ -69,37 +80,70 @@ select {
 .scheme-btn {
   background: #3D4B60;
   color: #FFF;
-  padding: 13px 11px;
+  padding: .75em;
   border: none;
   border-radius: 4px;
-  font-size: .75rem;
 }
 
 /* Color Section */
 
 .scheme-container {
-  height: 85%;
+  flex-direction: column;
 }
 
 .color-container {
-  flex-direction: column;
-  height: 100%;
+  height: 10%;
+  width: 100%;
   cursor: pointer;
 }
 
 .color-stripe {
-  width: 110px;
-  height: 415px;
+  width: 75%;
+  height: 10vh;
   pointer-events: none;
 }
 
 .color-code {
   font-size: .75rem;
   text-align: center;
-  margin: 22px auto;
+  margin: auto auto;
   pointer-events: none;
 }
  
+/* media queries */
 
+@media (min-width: 500px) {
+  header {
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+    padding: 1.44em 0.95em;
+    height: 15%;
+    background: black;
+  }
+
+  .scheme-btn {
+    padding: 0.5em;
+    border: none;
+    border-radius: 4px;
+    font-size: .75rem;
+  }
+
+  .color-stripe {
+    width: 100%;
+    height: 100%;
+    max-height: 415px;
+  }
+
+  .color-container {
+    flex-direction: column;
+  }
+
+  .color-code {
+    font-size: .75rem;
+    text-align: center;
+    margin: 22px auto;
+  }
+}
 
   
