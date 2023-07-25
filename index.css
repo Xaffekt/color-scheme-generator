@@ -1,5 +1,5 @@
 html, body {
-  height: 0;
+    height: 0;
     margin: 0;
     padding: 0;
     color: #D5D4D8;
@@ -12,8 +12,8 @@ html, body {
     }
 
 .container {
-    max-width: 1000px ;
-    max-height: 1000px;
+    max-width: 750px ;
+    max-height:750px;
     width: 100vw;
     height: 100vh;
     background: #1F2937;
@@ -88,62 +88,28 @@ select {
 /* Color Section */
 
 .scheme-container {
-  flex-direction: column;
+  margin-top: 5em;
 }
 
 .color-container {
-  height: 10%;
+  flex-direction: column;
+  height: 100%;
   width: 100%;
-  cursor: pointer;
 }
 
 .color-stripe {
-  width: 75%;
-  height: 10vh;
-  pointer-events: none;
+  width: 100%;
+  min-width: 75px;
+  height: 415px;
 }
 
 .color-code {
   font-size: .75rem;
   text-align: center;
-  margin: auto auto;
-  pointer-events: none;
+  margin: 22px auto;
 }
  
 /* media queries */
 
-@media (min-width: 500px) {
-  header {
-    justify-content: space-around;
-    align-items: center;
-    gap: 5px;
-    padding: 1.44em 0.95em;
-    height: 15%;
-    background: black;
-  }
-
-  .scheme-btn {
-    padding: 0.5em;
-    border: none;
-    border-radius: 4px;
-    font-size: .75rem;
-  }
-
-  .color-stripe {
-    width: 100%;
-    height: 100%;
-    max-height: 415px;
-  }
-
-  .color-container {
-    flex-direction: column;
-  }
-
-  .color-code {
-    font-size: .75rem;
-    text-align: center;
-    margin: 22px auto;
-  }
-}
 
   
