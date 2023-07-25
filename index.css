@@ -31,33 +31,29 @@ header,
 
 /* Header seaction */
 header {
-    flex-direction: column;
     gap: 5px;
     padding: 1.44em 0.95em;
-    height: 15%;
+    height: 100px;
     margin-bottom: 1em;
-}
-
-.sub-container {
-  justify-content: space-between;
-  margin-bottom: 1em;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .color-picker {
     width: 51px;
     height: 34px;
     padding: 0.5px 2px;
-
 }
 
 .scheme-select {
   position: relative;
   font-family: inherit;
-  width: 70%;
+  width: 65%;
 }
 
 select {
   width: 100%;
+  height: 100%;
   padding: 0.56em 4em 0.56em 0.81em;
   border-radius: 6px;
   background: #1F2937;
@@ -83,30 +79,32 @@ select {
   padding: .75em;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 /* Color Section */
 
 .scheme-container {
-  margin-top: 5em;
+  height: 85%;
 }
 
 .color-container {
   flex-direction: column;
   height: 100%;
   width: 100%;
+  cursor: pointer;
 }
 
 .color-stripe {
   width: 100%;
   min-width: 75px;
-  height: 415px;
+  height: 85%;
 }
 
 .color-code {
-  font-size: .75rem;
+  font-size: .9rem;
   text-align: center;
-  margin: 22px auto;
+  margin: 35px auto 0;
 }
  
 /* media queries */
